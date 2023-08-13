@@ -1,0 +1,11 @@
+apiVersion: environment.cloudbees.com/v1alpha1
+kind: GitRepository
+metadata:
+  name: kiddcorp-cloudbees-ci-insurance-frontend                             
+  namespace: previews
+spec:
+  url: https://github.com/kiddcorp-cloudbees-ci/insurance-frontend.git
+  apiTokenSecretRef:
+    name: beedemo-dev-github-token
+  autoUpdateContexts:                           
+  - default
